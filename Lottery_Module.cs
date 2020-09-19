@@ -22,13 +22,6 @@ namespace RezeroDiscord.Modules
             public static BaseSocketClient socket;
             public static int count = 1;
             
-            [Command("ping")]
-            public async Task Echo()
-            {
-                var ping = Context.Client.Latency;
-                await ReplyAsync(ping.ToString());
-            }
-
             [Command("join")]
             public async Task Join()
             {
@@ -113,6 +106,9 @@ namespace RezeroDiscord.Modules
                 {
                     await ReplyAsync("ごめんなさい！！内部でバグりました！！");
                 }
+                dict.Clear();
+                count = 1;
+                // await ReplyAsync("初期化しました～");
             }
         }
     }
