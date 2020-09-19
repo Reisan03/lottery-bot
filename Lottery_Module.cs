@@ -28,8 +28,6 @@ namespace RezeroDiscord.Modules
                 string user = Context.Message.Author.ToString();
                 string id = Context.User.Mention.ToString();
 
-                // await ReplyAsync(dict[count]);
-                // await ReplyAsync(dict[2]);
                 if (dict.ContainsValue(id))
                     await ReplyAsync("追加済みです！！");
                 else
@@ -108,7 +106,6 @@ namespace RezeroDiscord.Modules
                 }
                 dict.Clear();
                 count = 1;
-                // await ReplyAsync("初期化しました～");
             }
         }
     }
