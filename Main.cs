@@ -47,7 +47,7 @@ namespace Rezero
             await commands.AddModulesAsync(Assembly.GetEntryAssembly(), services);
             await client.LoginAsync(TokenType.Bot, token);
             await client.StartAsync();
-            await client.SetGameAsync("Beta さどうちう");
+            await client.SetGameAsync("Status");
             await Task.Delay(-1);
         }
 
